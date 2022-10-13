@@ -11,8 +11,8 @@ const db = getFirestore(app)
 export interface User {
   uid: string,
   displayName: string | null,
-  name: string | null,
-  lastName: string | null,
+  name?: string | null,
+  lastName?: string | null,
   email: string | null,
   emailVerified: boolean,
   userPhoto: string | null

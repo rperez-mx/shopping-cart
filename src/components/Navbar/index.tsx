@@ -94,7 +94,7 @@ export default function Navbar() {
                 <Avatar
                   size={'sm'}
                   src={
-                      userState.user.userPhoto
+                      userState.user.userPhoto || undefined
                   }
                 />
        </>}

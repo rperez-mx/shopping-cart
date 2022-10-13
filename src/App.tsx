@@ -18,7 +18,11 @@ function App() {
     let logged = localStorage.getItem('isLogged')
     let user = {} as User
     if(logged){
-      user = JSON.parse(localStorage.getItem('user'))
+      try{
+        user = JSON.parse(localStorage.getItem('user') || '{}')
+      } catch(e){
+        console.log('Error: '+e)
+      }
       console.log('Logged')
       dispatch(setUser(user))
     } else {

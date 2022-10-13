@@ -74,8 +74,8 @@ export default function Login() {
       let uuser = {} as User
       uuser.uid = user.uid
       uuser.displayName = user.displayName
-      uuser.name = user.displayName.split(' ')[0]
-      uuser.lastName = user.displayName.split(' ')[1]
+      uuser.name = user.displayName?.split(' ')[0]
+      uuser.lastName = user.displayName?.split(' ')[1]
       uuser.email = user.email
       uuser.emailVerified = user.emailVerified
       uuser.userPhoto = user.photoURL

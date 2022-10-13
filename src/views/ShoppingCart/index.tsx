@@ -26,12 +26,11 @@ console.log('cartItems has changed')
 return () => {
   console.log('Child unmounted');
   localStorage.setItem('cartItems', JSON.stringify(cartItems))
-  
 };
   },[cartItems])
   React.useEffect(()=>{
 console.log('Location has changed')
-if(cartItems.length!==0){
+if(cartItems.length==0){
  dispatch(populateState(JSON.parse(localStorage.getItem('cartItems') || "")))
 }
   },[location])
